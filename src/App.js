@@ -1,23 +1,40 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState, useEffect } from 'react';
+import { ChoiceContext } from './components/ChoiceContext';
+// import components
+import ScoreBoard from './components/ScoreBoard';
+import Button from './components/Button';
+import Rules from './components/Rules';
+import PickPhase from './components/PickPhase';
+import Picked from './components/Picked';
+import WinLose from './components/WinLose';
 
 function App() {
-  return (
+  const [rulesVisible, setRulesVisible] = useState(false);
+  const [Score, setScore] = useState(0);
+  const [Choice, setChoice] = useState('');
+  const [House, setHouse] = useState('');
+  const onRulesButtonCLick = () =>{
+    setRulesVisible(true);
+  }
+  useEffect(() =>{
+    const ScoreLocal = JSON.parse(localStorage.getItem('Score'));
+    if(!ScoreLocal)
+      localStorage.setItem('Score', 0);
+    else
+      setScore(ScoreLocal);
+  }, [Score]);
+
+    return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ChoiceContext.Provider value={ { Choice, setChoice, House, setHouse, Score, setScore} }>
+          <ScoreBoard Score={ Score }/>
+          {!Choice && <PickPhase/>}
+          {Choice && <Picked/>}
+          {Choice && House && <WinLose />}
+      </ChoiceContext.Provider>
+      <Button onClick={ onRulesButtonCLick }>Rules</Button>
+      <Rules Visibility={ rulesVisible } setRulesVisibility={ setRulesVisible }/>
     </div>
   );
 }

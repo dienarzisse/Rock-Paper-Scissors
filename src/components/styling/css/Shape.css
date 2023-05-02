@@ -1,0 +1,40 @@
+.Shape {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4.625rem;
+  height: 4.625rem;
+  border-radius: 9999px;
+  background-color: white;
+  border: 1px solid transparent;
+}
+
+.Scissors {
+  outline: 11px solid #EB9F0E;
+  box-shadow: 0px 5.3px 0px 10px #C76C1B;
+  box-shadow: 0 0 0 0 rgb(0, 0, 0);
+}
+
+.Spock {
+  outline: 11px solid #3FB7CD;
+  box-shadow: 0px 5.3px 0px 10px #2D8DAB;
+}
+
+.Paper {
+  outline: 11px solid #4664F4;
+  box-shadow: 0px 5.3px 0px 10px #2A45C2;
+}
+
+.Lizard {
+  outline: 11px solid #834EE3;
+  box-shadow: 0px 5.3px 0px 10px #5F37A8;
+}
+
+.Rock {
+  outline: 11px solid #DB2E4D;
+  box-shadow: 0px 5.3px 0px 10px #9D1634;
+}
+
+img {
+  pointer-events: none;
+}/*# sourceMappingURL=Shape.css.map */

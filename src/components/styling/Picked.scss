@@ -1,0 +1,48 @@
+.Picked{
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+    margin-top: 4.25rem;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3.875rem;
+    .you-picked, .house-picked{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        .picked-icon{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 2.25rem;
+            border-radius:50%;
+            img{
+                max-width: 2.5rem;
+            }
+        }
+    }
+    .you-picked>.picked-icon{
+        transform: scale(1);
+	    animation: pulse 1s 3 forwards;
+    }
+}
+
+// pulse animation 
+@keyframes pulse {
+	0% {
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+	}
+
+	70% {
+		box-shadow: 0 0 0 60px rgba(121, 115, 115, 0);
+	}
+
+	100% {
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+}
