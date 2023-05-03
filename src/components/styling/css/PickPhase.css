@@ -43,4 +43,10 @@
 .PickPhase .Icons .Rock {
   bottom: -15%;
   right: 2%;
+}
+
+@media only screen and (min-width: 992px) {
+  .PickPhase {
+    scale: 1.25;
+  }
 }/*# sourceMappingURL=PickPhase.css.map */

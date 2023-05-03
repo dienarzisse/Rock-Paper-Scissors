@@ -26,7 +26,7 @@ function WinLose(){
         }
     }
     const Result = Winning(Choice.toLowerCase(), House.toLowerCase());
-    useEffect(function(){
+    useEffect(() => {
         if(Result === 'You win')
             {
                 setScore(Score + 1);

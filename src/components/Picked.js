@@ -16,14 +16,15 @@ function Picked(){
         <div className="Picked">
             <div className="you-picked">
                 <div className="picked-icon">
-                    <Shape shape={ `${ Choice }` }></Shape>
+                    {<Shape shape={ `${ Choice }` }></Shape>}
                 </div>
                 <span>You Picked</span>
             </div>
 
             <div className="house-picked">
                 <div className="picked-icon">
-                    <Shape shape={ `${ House }` }></Shape>
+                    {House && <Shape shape={ `${ House }` }></Shape>}
+                    {!House && <div className="empty-shape"></div> }
                 </div>
                 {!House && <span>The House is picking...</span>}
                 {House && <span>The House picked</span>}

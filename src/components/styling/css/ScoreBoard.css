@@ -37,4 +37,11 @@
   line-height: 2.5rem;
   text-align: center;
   color: #565468;
+}
+
+@media only screen and (min-width: 992px) {
+  .ScoreBoard {
+    width: 43.75rem;
+    margin-top: -7.5rem;
+  }
 }/*# sourceMappingURL=ScoreBoard.css.map */

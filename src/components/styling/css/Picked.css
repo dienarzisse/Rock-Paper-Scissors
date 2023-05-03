@@ -23,6 +23,12 @@
   margin-bottom: 2.25rem;
   border-radius: 50%;
 }
+.Picked .you-picked .picked-icon .empty-shape, .Picked .house-picked .picked-icon .empty-shape {
+  width: 6.875rem;
+  height: 6.875rem;
+  border-radius: 9999px;
+  background: rgba(0, 0, 0, 0.1);
+}
 .Picked .you-picked .picked-icon img, .Picked .house-picked .picked-icon img {
   max-width: 2.5rem;
 }
@@ -40,5 +46,13 @@
   }
   100% {
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+@media only screen and (min-width: 992px) {
+  .Picked {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 41.125rem;
   }
 }/*# sourceMappingURL=Picked.css.map */

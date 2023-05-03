@@ -32,6 +32,9 @@
   margin-top: 2rem auto;
   color: inherit;
 }
+.Rules a {
+  margin: 0.5rem;
+}
 .Rules button {
   background-color: transparent;
   cursor: pointer;
@@ -44,4 +47,38 @@
 }
 .Rules button img {
   width: 1.25rem;
+}
+
+@media only screen and (min-width: 992px) {
+  .Rules {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 28rem;
+    height: 30.8125rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px 4px rgb(175, 153, 153);
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .Rules h1 {
+    margin: 2rem;
+    order: 1;
+    margin-right: 14.5rem;
+  }
+  .Rules img {
+    width: 21rem;
+    order: 3;
+  }
+  .Rules button {
+    margin: 0;
+    order: 2;
+  }
+  .Rules a {
+    order: 4;
+    margin: 1rem;
+  }
 }/*# sourceMappingURL=Rules.css.map */
